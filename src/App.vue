@@ -7,9 +7,12 @@
         <button @click="selectedComponent = 'appNew'">New</button>
         <hr />
         <p>{{selectedComponent}}</p>
-        <component :is="selectedComponent">
-          <p>Default Component</p>
-        </component>
+        <!-- supaya slot tetap hidup walaupun direfresh -->
+        <keep-alive>
+          <component :is="selectedComponent">
+            <p>Default Component</p>
+          </component>
+        </keep-alive>
       </div>
     </div>
   </div>
