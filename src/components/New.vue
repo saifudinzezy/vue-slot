@@ -12,7 +12,10 @@ export default {
     return {
       counter: 0
     };
-  }
+  },
+  destroyed() {},
+  deactivated() {},
+  activated() {}
 };
 </script>
 
