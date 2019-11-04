@@ -5,7 +5,8 @@
         <app-quote>
           <!-- //kirim ke anak untuk di render. -->
           <h2 slot="title">{{quoteTitle}}</h2>
-          <p slot="content">A wonderfull Quote</p>
+          <!-- slot default -->
+          <p>A wonderfull Quote</p>
         </app-quote>
       </div>
     </div>
