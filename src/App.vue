@@ -2,16 +2,17 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <app-quote quote="is value from app.vue"></app-quote>
-        <h2>The quote</h2>
-        <p>A wonderfull Quote</p>
+        <app-quote>
+          <h2>The quote</h2>
+          <p>A wonderfull Quote</p>
+        </app-quote>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Quote from "@/components/Quote.vue";
+import Quote from "./components/Quote.vue";
 
 export default {
   components: {
