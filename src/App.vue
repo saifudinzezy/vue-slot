@@ -2,28 +2,35 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <app-quote>
-          <!-- //kirim ke anak untuk di render. -->
-          <h2 slot="title">{{quoteTitle}}</h2>
-          <!-- slot default -->
-          <p>A wonderfull Quote</p>
-        </app-quote>
+        <button @click="selectedComponent = 'appQuote'">Quote</button>
+        <button @click="selectedComponent = 'appAuthor'">Author</button>
+        <button @click="selectedComponent = 'appNew'">New</button>
+        <hr />
+        <p>{{selectedComponent}}</p>
+        <component :is="selectedComponent">
+          <p>Default Component</p>
+        </component>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Quote from "./components/Quote.vue";
+import Quote from "@/components/Quote.vue";
+import New from "@/components/New.vue";
+import Author from "@/components/Author.vue";
 
 export default {
   data() {
     return {
-      quoteTitle: "ini dari app.vue"
+      quoteTitle: "ini dari app.vue",
+      selectedComponent: "appQuote"
     };
   },
   components: {
-    appQuote: Quote
+    appQuote: Quote,
+    appAuthor: Author,
+    appNew: New
   }
 };
 </script>
